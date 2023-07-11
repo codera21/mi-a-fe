@@ -4,7 +4,7 @@ import RootLayout from '@/components/base/root';
 
 const heading = 'Hello World';
 
-const paragraph = 'This is the first port in react next framework';
+const paragraph = 'This is the first post in react next framework';
 
 export default function FirstPost() {
   return (

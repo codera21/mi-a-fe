@@ -1,6 +1,7 @@
 import './globals.scss';
 import Footer from './footer';
 import { Navbar } from './nav';
+import { MenuBar } from './menu';
 
 export default function RootLayout({
   children,
@@ -10,7 +11,13 @@ export default function RootLayout({
   return (
     <>
       <Navbar />
-      {children}
+      <div className='columns'>
+        <div className='column is-one-quarter'>
+          <MenuBar />
+        </div>
+        <div className='column'>{children}</div>
+      </div>
+
       <Footer />
     </>
   );
