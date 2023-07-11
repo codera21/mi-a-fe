@@ -25,6 +25,9 @@ export function MenuBar() {
         <li>
           <a>Users</a>
         </li>
+        <li>
+          <a>Customers</a>
+        </li>
       </ul>
     </aside>
   );
