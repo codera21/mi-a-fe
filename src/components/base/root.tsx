@@ -14,7 +14,7 @@ export default function RootLayout({
     <>
       <Navbar />
       <div className='columns'>
-        <div className='column is-one-quarter'>
+        <div className='column is-one-fifth'>
           <MenuBar activeClass={activeClass} />
         </div>
         <div className='column'>{children}</div>

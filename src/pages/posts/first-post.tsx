@@ -4,10 +4,9 @@ import RootLayout from '@/components/base/root';
 import { MenuBarItems } from '@/components/base/menu';
 
 const heading = 'Hello World';
-
 const paragraph = 'This is the first post in react next framework';
 
-export default function FirstPost() {
+export default function FirstPost(): JSX.Element {
   return (
     <RootLayout activeClass={MenuBarItems.DASHBOARD}>
       <h1>{heading}</h1>
