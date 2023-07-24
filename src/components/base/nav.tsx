@@ -1,63 +1,65 @@
+import { MdiIcon } from '@/components/icons';
+import Icon from '@mdi/react';
+import {
+  mdiAccount,
+  mdiApplicationCog,
+  mdiChevronDown,
+  mdiDotsVertical,
+  mdiEmail,
+  mdiForwardburger,
+  mdiHeart,
+  mdiLogout,
+  mdiMenu,
+  mdiSettingsHelper,
+} from '@mdi/js';
+
 export function Navbar() {
   return (
-    <nav id='navbar-main' className='navbar is-fixed-top'>
+    <nav id='navbar-main' className='navbar'>
       <div className='navbar-brand'>
         <a className='navbar-item is-hidden-desktop jb-aside-mobile-toggle'>
-          <span className='icon'>
-            <i className='mdi mdi-forwardburger mdi-24px'></i>
-          </span>
+          <MdiIcon path={mdiForwardburger} />
         </a>
-        <div className='navbar-item has-control'>
-          <div className='control'>
-            <input placeholder='Search everywhere...' className='input' />
-          </div>
-        </div>
       </div>
       <div className='navbar-brand is-right'>
         <a
           className='navbar-item is-hidden-desktop jb-navbar-menu-toggle'
           data-target='navbar-menu'
         >
-          <span className='icon'>
-            <i className='mdi mdi-dots-vertical'></i>
-          </span>
+          <MdiIcon path={mdiDotsVertical} />
         </a>
       </div>
       <div className='navbar-menu fadeIn animated faster' id='navbar-menu'>
         <div className='navbar-end'>
           <div className='navbar-item has-dropdown has-dropdown-with-icons has-divider is-hoverable'>
             <a className='navbar-link is-arrowless'>
-              <span className='icon'>
-                <i className='mdi mdi-menu'></i>
-              </span>
+              <MdiIcon path={mdiMenu} />
               <span>Sample Menu</span>
-              <span className='icon'>
-                <i className='mdi mdi-chevron-down'></i>
-              </span>
+              <MdiIcon path={mdiChevronDown} />
             </a>
             <div className='navbar-dropdown'>
               <a href='profile.html' className='navbar-item'>
                 <span className='icon'>
-                  <i className='mdi mdi-account'></i>
+                  <Icon path={mdiAccount} />
                 </span>
                 <span>My Profile</span>
               </a>
               <a className='navbar-item'>
                 <span className='icon'>
-                  <i className='mdi mdi-settings'></i>
+                  <Icon path={mdiSettingsHelper} />
                 </span>
                 <span>Settings</span>
               </a>
               <a className='navbar-item'>
                 <span className='icon'>
-                  <i className='mdi mdi-email'></i>
+                  <Icon path={mdiEmail} />
                 </span>
                 <span>Messages</span>
               </a>
               <hr className='navbar-divider' />
               <a className='navbar-item'>
                 <span className='icon'>
-                  <i className='mdi mdi-logout'></i>
+                  <Icon path={mdiLogout} />
                 </span>
                 <span>Log Out</span>
               </a>
@@ -74,34 +76,21 @@ export function Navbar() {
               <div className='is-user-name'>
                 <span>John Doe</span>
               </div>
-              <span className='icon'>
-                <i className='mdi mdi-chevron-down'></i>
-              </span>
+
+              <MdiIcon path={mdiChevronDown} />
             </a>
             <div className='navbar-dropdown'>
               <a href='profile.html' className='navbar-item'>
-                <span className='icon'>
-                  <i className='mdi mdi-account'></i>
-                </span>
+                <MdiIcon path={mdiAccount} />
                 <span>My Profile</span>
               </a>
               <a className='navbar-item'>
-                <span className='icon'>
-                  <i className='mdi mdi-settings'></i>
-                </span>
+                <MdiIcon path={mdiApplicationCog} />
                 <span>Settings</span>
-              </a>
-              <a className='navbar-item'>
-                <span className='icon'>
-                  <i className='mdi mdi-email'></i>
-                </span>
-                <span>Messages</span>
               </a>
               <hr className='navbar-divider' />
               <a className='navbar-item'>
-                <span className='icon'>
-                  <i className='mdi mdi-logout'></i>
-                </span>
+                <MdiIcon path={mdiLogout} />
                 <span>Log Out</span>
               </a>
             </div>
@@ -111,15 +100,11 @@ export function Navbar() {
             title='About'
             className='navbar-item has-divider is-desktop-icon-only'
           >
-            <span className='icon'>
-              <i className='mdi mdi-help-circle-outline'></i>
-            </span>
+            <MdiIcon path={mdiHeart} color='#BB46FB' />
             <span>About</span>
           </a>
           <a title='Log out' className='navbar-item is-desktop-icon-only'>
-            <span className='icon'>
-              <i className='mdi mdi-logout'></i>
-            </span>
+            <MdiIcon path={mdiLogout} />
             <span>Log out</span>
           </a>
         </div>

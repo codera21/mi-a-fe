@@ -22,7 +22,9 @@ type MenuItemParams = {
 export function MenuBar({ activeClass }: MenuBarParams) {
   return (
     <aside className='menu'>
-      <p className='menu-label'>Billing Management</p>
+      <p className='menu-label'>
+        <h3 className='subtitle'>Billing Management</h3>
+      </p>
       <ul className='menu-list'>
         <MenuBarItem
           value='Dashboard'
