@@ -1,23 +1,18 @@
 import { MenuBarItems } from '@/components/base/menu';
 import RootLayout from '@/components/base/root';
-import Link from 'next/link';
+import { BreadCrumb } from '@/components/breadcrumb';
+import { Headline } from '@/components/headline';
+
+const breadCrumb = ['Admin', 'Dashboard'];
+const title = 'Dashboard';
+
 export default function Home() {
   return (
     <RootLayout activeClass={MenuBarItems.DASHBOARD}>
-      <section className='hero is-info is-medium'>
-        <div className='hero-body'>
-          <p className='title'>Hero Title</p>
-          <p className='subtitle'>Hero subtitle</p>
-        </div>
-      </section>
-      <section>
-        <br />
-        <br />
-        <h1 className='is-size-1'>Hello Hello</h1>
-        <Link href='/posts/first-post'>To Posts</Link>
-        <br />
-        <br />
-      </section>
+      <div className='container'>
+        <BreadCrumb path={breadCrumb} />
+        <Headline title={title} />
+      </div>
     </RootLayout>
   );
 }

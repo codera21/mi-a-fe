@@ -12,14 +12,12 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <div className='columns'>
+      <Navbar />
+      <div className='columns '>
         <div className='column is-one-fifth'>
           <MenuBar activeClass={activeClass} />
         </div>
-        <div className='column'>
-          <Navbar />
-          {children}
-        </div>
+        <div className='column'>{children}</div>
       </div>
 
       <Footer />

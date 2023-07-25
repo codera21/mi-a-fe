@@ -21,16 +21,17 @@ type MenuItemParams = {
 
 export function MenuBar({ activeClass }: MenuBarParams) {
   return (
-    <aside className='menu'>
-      <p className='menu-label'>
-        <h3 className='subtitle'>Billing Management</h3>
-      </p>
+    <aside className='menu mx-3 my-2'>
       <ul className='menu-list'>
         <MenuBarItem
           value='Dashboard'
           linkTo='/'
           isActive={activeClass === MenuBarItems.DASHBOARD}
         />
+
+        <div className='menu-label'>
+          <p>Billing</p>
+        </div>
 
         <MenuBarItem
           value='Invoice'

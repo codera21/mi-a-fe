@@ -6,7 +6,6 @@ import {
   mdiChevronDown,
   mdiDotsVertical,
   mdiEmail,
-  mdiForwardburger,
   mdiHeart,
   mdiLogout,
   mdiMenu,
@@ -15,10 +14,13 @@ import {
 
 export function Navbar() {
   return (
-    <nav id='navbar-main' className='navbar'>
+    <nav id='navbar-main' className='navbar mb-2'>
       <div className='navbar-brand'>
-        <a className='navbar-item is-hidden-desktop jb-aside-mobile-toggle'>
-          <MdiIcon path={mdiForwardburger} />
+        <a className='navbar-item'>
+          {/* <MdiIcon path={mdiForwardburger} /> */}
+          <p className='is-uppercase is-family-monospace subtitle is-size-3'>
+            Project MI-A
+          </p>
         </a>
       </div>
       <div className='navbar-brand is-right'>
